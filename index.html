@@ -1,0 +1,2471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allegra</title>
+    <style>
+        @charset "UTF-8";
+@font-face {
+  font-family: "Nexa-Black";
+  src: url("./fonts/Nexa-Black.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nexa-Book";
+  src: url("./fonts/Nexa-Book.otf") format("opentype");
+}
+@font-face {
+  font-family: "Nexa-Heavy";
+  src: url("./fonts/Nexa-Heavy.otf") format("opentype");
+}
+html {
+  scroll-behavior: smooth;
+}
+@keyframes es-pulse-icon-1 {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}@keyframes es-pulse-icon-2 {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}@keyframes es-pulse-icon-3 {
+  0% {
+    transform: scale(1);
+  }
+  20% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes es-light {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.6);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+@keyframes es-move-text {
+  0% {
+    opacity: 0;
+    transform: translateX(-10%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes es-move-text-bottom {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes es-pulse-kv {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.02);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes es-pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes es-two-weeks {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes es-pulse-2 {
+  0% {
+    transform: scale(1);
+    filter: blur(4px), brightness(50);
+  }
+  20% {
+    transform: scale(1.2);
+    filter: blur(4px), brightness(50);
+  }
+  40% {
+    transform: scale(0.8);
+    filter: blur(4px), brightness(50);
+  }
+  60% {
+    transform: scale(1.2);
+    filter: blur(4px), brightness(100);
+  }
+  80% {
+    transform: scale(0.8);
+    filter: blur(4px), brightness(50);
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(4px), brightness(50);
+  }
+}
+@keyframes float-pollen-1 {
+  0% {
+    opacity: 1;
+    top: 100%;
+    transform: translateX(20px);
+    scale: 1;
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-20px);
+    scale: 0.5;
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(20px);
+    scale: 1.5;
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-20px);
+    opacity: 0;
+    scale: 0.5;
+  }
+}
+@keyframes float-pollen-2 {
+  0% {
+    opacity: 0;
+    top: 80%;
+    transform: translateX(20px);
+    scale: 1;
+  }
+  10% {
+    opacity: 0.6;
+    scale: 0.5;
+  }
+  20% {
+    transform: translateX(-10px);
+    scale: 1.5;
+  }
+  40% {
+    transform: translateX(-20px);
+    scale: 0.5;
+  }
+  60% {
+    transform: translateX(10px);
+    scale: 1;
+  }
+  80% {
+    transform: translateX(-20px);
+    scale: 1.5;
+  }
+  100% {
+    top: 0%;
+    transform: translateX(0px);
+    opacity: 0;
+    scale: 1;
+  }
+}
+@keyframes float-pollen-3 {
+  0% {
+    opacity: 0;
+    top: 100%;
+    transform: translateX(20px);
+    scale: 1;
+  }
+  10% {
+    opacity: 0.6;
+    scale: 0.5;
+  }
+  20% {
+    transform: translateX(-20px);
+    scale: 1;
+  }
+  40% {
+    transform: translateX(-20px);
+    scale: 1.5;
+  }
+  60% {
+    transform: translateX(20px);
+    opacity: 1;
+    scale: 1;
+  }
+  80% {
+    transform: translateX(-20px);
+    scale: 1.5;
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-20px);
+    opacity: 0;
+    scale: 1;
+  }
+}
+@keyframes float-pollen-4 {
+  0% {
+    opacity: 0;
+    top: 50%;
+    transform: translateX(20px);
+    scale: 1.5;
+  }
+  10% {
+    opacity: 0.6;
+    scale: 1.2;
+  }
+  20% {
+    transform: translateX(50px);
+    scale: 1.8;
+  }
+  40% {
+    transform: translateX(50px);
+    scale: 1.2;
+  }
+  60% {
+    transform: translateX(40px);
+    scale: 1.5;
+  }
+  80% {
+    transform: translateX(50px);
+    scale: 1;
+  }
+  100% {
+    top: 0%;
+    transform: translateX(10px);
+    opacity: 0;
+  }
+}
+@keyframes float-pollen-5 {
+  0% {
+    opacity: 0;
+    top: 100%;
+    transform: translateX(-20px) rotate(0deg);
+    scale: 0.5;
+  }
+  10% {
+    opacity: 0.6;
+    scale: 1;
+  }
+  20% {
+    transform: translateX(-40px) rotate(45deg);
+    scale: 0.6;
+  }
+  40% {
+    transform: translateX(-40px) rotate(90deg);
+    scale: 1.2;
+  }
+  60% {
+    transform: translateX(-20px) rotate(180deg);
+    scale: 1;
+  }
+  80% {
+    transform: translateX(-40px) rotate(180deg);
+    scale: 1.6;
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-40px) rotate(225deg);
+    opacity: 0;
+    scale: 1;
+  }
+}
+@keyframes float-pollen-6 {
+  0% {
+    opacity: 1;
+    top: 50%;
+    transform: translateX(20px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+@keyframes float-pollen-7 {
+  0% {
+    opacity: 0;
+    top: 40%;
+    transform: translateX(20px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-10px);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(30px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+}
+@keyframes float-pollen-8 {
+  0% {
+    opacity: 0;
+    top: 90%;
+    transform: translateX(20px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(10px);
+  }
+  60% {
+    transform: translateX(50px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+}
+@keyframes float-pollen-9 {
+  0% {
+    opacity: 0;
+    top: 20%;
+    transform: translateX(20px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-20px);
+  }
+  40% {
+    transform: translateX(-20px);
+  }
+  60% {
+    transform: translateX(20px);
+  }
+  80% {
+    transform: translateX(-20px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+}
+@keyframes float-pollen-10 {
+  0% {
+    opacity: 0;
+    top: 100%;
+    transform: translateX(-20px);
+  }
+  10% {
+    opacity: 0.6;
+  }
+  20% {
+    transform: translateX(-40px);
+  }
+  40% {
+    transform: translateX(-40px);
+  }
+  60% {
+    transform: translateX(-20px);
+  }
+  80% {
+    transform: translateX(-40px);
+  }
+  100% {
+    top: 0%;
+    transform: translateX(-40px);
+    opacity: 0;
+  }
+}
+#es-allegra.es-allegra {
+  font-family: "Nexa-Black";
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.2;
+  max-width: 790px;
+  min-width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  color: #fff;
+  background-color: #9e4ea9;
+  overflow: hidden;
+  /* Track */
+  /* Handle */
+}
+#es-allegra.es-allegra ::-webkit-scrollbar {
+  width: 12px !important;
+}
+#es-allegra.es-allegra ::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3) !important;
+  -webkit-border-radius: 10px !important;
+  -webkit-overflow-scrolling: auto;
+  border-radius: 10px !important;
+}
+#es-allegra.es-allegra ::-webkit-scrollbar-thumb {
+  -webkit-overflow-scrolling: auto;
+  border-radius: 10px !important;
+  background: #5d337a !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+}
+#es-allegra.es-allegra ::-webkit-scrollbar-thumb:window-inactive {
+  -webkit-overflow-scrolling: auto;
+  border-radius: 10px !important;
+  background: #5d337a !important;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5) !important;
+  -webkit-overflow-scrolling: auto;
+}
+#es-allegra.es-allegra img {
+  max-width: 100%;
+}
+#es-allegra.es-allegra .es-kv {
+  min-height: 400px;
+  padding: 20px;
+  position: relative;
+}
+#es-allegra.es-allegra .es-kv__pollen {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #f3efb1;
+  border-radius: 50%;
+  z-index: 10;
+  bottom: 20px;
+  opacity: 0;
+  filter: blur(1px);
+}
+#es-allegra.es-allegra .es-kv__pollen--1 {
+  left: 80px;
+  animation: float-pollen-1 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--2 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 30s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--3 {
+  left: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 35s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--4 {
+  left: 0;
+  bottom: 50px;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--5 {
+  right: 0;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--6 {
+  left: 65px;
+  animation: float-pollen-1 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--7 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 30s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--8 {
+  left: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 35s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--9 {
+  left: 15px;
+  bottom: 50px;
+  animation: float-pollen-4 40s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--10 {
+  right: 20px;
+  animation: float-pollen-5 45s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--11 {
+  left: 80px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 205s;
+}
+#es-allegra.es-allegra .es-kv__pollen--12 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-kv__pollen--13 {
+  left: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 45s infinite;
+  animation-delay: 4s;
+}
+#es-allegra.es-allegra .es-kv__pollen--14 {
+  left: 0;
+  bottom: 50%;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 10s;
+}
+#es-allegra.es-allegra .es-kv__pollen--15 {
+  right: 0;
+  animation: float-pollen-5 45s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-kv__pollen--16 {
+  left: 65px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 15s;
+}
+#es-allegra.es-allegra .es-kv__pollen--17 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--18 {
+  left: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--19 {
+  left: 15px;
+  bottom: 50%;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--20 {
+  right: 20px;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--21 {
+  right: 80px;
+  animation: float-pollen-1 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--22 {
+  right: 300px;
+  bottom: 0;
+  animation: float-pollen-2 30s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--23 {
+  right: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 35s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--24 {
+  right: 0;
+  bottom: 50px;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--25 {
+  left: 0;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--26 {
+  left: 65px;
+  animation: float-pollen-1 35s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--27 {
+  right: 300px;
+  bottom: 0;
+  animation: float-pollen-2 30s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--28 {
+  right: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 35s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--29 {
+  right: 15px;
+  bottom: 50%;
+  animation: float-pollen-4 40s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--30 {
+  left: 20px;
+  animation: float-pollen-5 45s infinite;
+}
+#es-allegra.es-allegra .es-kv__pollen--31 {
+  right: 80px;
+  bottom: 50%;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--32 {
+  right: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-kv__pollen--33 {
+  right: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 45s infinite;
+  animation-delay: 4s;
+}
+#es-allegra.es-allegra .es-kv__pollen--34 {
+  right: 0;
+  bottom: 50%;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 10s;
+}
+#es-allegra.es-allegra .es-kv__pollen--35 {
+  right: 0;
+  animation: float-pollen-5 45s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-kv__pollen--36 {
+  right: 65px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 7s;
+}
+#es-allegra.es-allegra .es-kv__pollen--37 {
+  right: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-kv__pollen--38 {
+  right: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-kv__pollen--39 {
+  left: 20px;
+  bottom: 50%;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-kv__pollen--40 {
+  right: 20px;
+  animation: float-pollen-5 30s infinite;
+}
+#es-allegra.es-allegra .es-kv--desktop {
+  display: none;
+}
+#es-allegra.es-allegra .es-kv--mobile {
+  background-image: url(./img/allegra-kv-bg-mobile.webp);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: top;
+  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#es-allegra.es-allegra .es-kv__title {
+  text-transform: uppercase;
+  font-size: 24px;
+  margin-top: 60px;
+  text-shadow: 4px 3px 8px rgb(66, 68, 90);
+  font-family: "Nexa-Black";
+  animation: es-pulse-kv 2s infinite;
+  margin-left: 20px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-kv__subtitle {
+  font-size: 10px;
+  background-color: #f6cc30;
+  color: #5d337a;
+  padding: 5px;
+  margin-top: -20px;
+  font-family: "Nexa-Heavy";
+  margin-left: 20px;
+  width: 60%;
+  animation: es-pulse-kv 2s infinite;
+  opacity: 1;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-kv__content {
+  position: relative;
+  display: flex;
+}
+#es-allegra.es-allegra .es-kv__claims {
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-kv__claim {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2px;
+  font-family: "Nexa-Heavy";
+  text-shadow: 4px 3px 8px rgb(21, 21, 22);
+  text-transform: uppercase;
+  line-height: 1.2;
+
+}
+#es-allegra.es-allegra .es-kv__claim sup {
+  font-size: 8px;
+}
+#es-allegra.es-allegra .es-kv__packshot {
+  position: absolute;
+  max-width: 250px;
+  right: -20px;
+  bottom: 50px;
+}
+#es-allegra.es-allegra .es-mainCtn {
+  background-color: #9e4ea9;
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  margin-top: -40px;
+}
+#es-allegra.es-allegra .es-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-nav__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 90px;
+  min-width: 90px;
+  min-height: 30px;
+  margin: 5px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #9e4ea9;
+  background-color: #f6cc30;
+  font-size: 10px;
+  line-height: 1;
+  padding: 5px;
+  box-shadow: 8px 8px 28px -10px rgb(17, 17, 17);
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+  cursor: pointer;
+}
+#es-allegra.es-allegra .es-nav__link:hover {
+  transition: 0.4s ease-in-out;
+  transform: scale(0.98);
+  box-shadow: inset -3px 0px 24px -12px rgb(17, 17, 17);
+}
+#es-allegra.es-allegra .es-about {
+  margin: 10px;
+  background-color: #853a92;
+}
+#es-allegra.es-allegra .es-about__titleCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-about__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-about__titleImg {
+  max-width: 150px;
+}
+#es-allegra.es-allegra .es-about__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-about__single {
+  min-width: 250px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px;
+}
+#es-allegra.es-allegra .es-about__iconCTn {
+  position: relative;
+}
+#es-allegra.es-allegra .es-about__icon {
+  max-width: 80px;
+  margin-right: 20px;
+  animation: es-pulse 2s infinite;
+}
+#es-allegra.es-allegra .es-about__icon--1 {
+  animation: es-pulse-icon-1 3s infinite ;
+}
+#es-allegra.es-allegra .es-about__icon--2 {
+  animation: es-pulse-icon-2 3s infinite ;
+}
+#es-allegra.es-allegra .es-about__icon--3 {
+  animation: es-pulse-icon-3 3s infinite ;
+}
+#es-allegra.es-allegra .es-about__textCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#es-allegra.es-allegra .es-about__subtitle {
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Nexa-Heavy";
+  text-align: center;
+  margin-bottom: 2px;
+  margin-top: 20px;
+  line-height: 1.2;
+  padding-bottom: 0;
+}
+#es-allegra.es-allegra .es-about__desc {
+  font-size: 14px;
+  font-family: "Nexa-Book";
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-symptoms {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+}
+#es-allegra.es-allegra .es-symptoms__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  text-align: center;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-symptoms__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-symptoms__single {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+#es-allegra.es-allegra .es-symptoms__iconCtn {
+  position: relative;
+}
+#es-allegra.es-allegra .es-symptoms__redness {
+  position: absolute;
+  top: 42%;
+  left: 36%;
+  width: 15px;
+  height: 10px;
+  background-color: red;
+  border-radius: 30px;
+  opacity: 0.8;
+  filter: blur(4px);
+  animation: es-pulse-2 4s infinite;
+}
+#es-allegra.es-allegra .es-symptoms__redness--left {
+  top: 33%;
+  left: 28%;
+  filter: blur(4px);
+  width: 12px;
+  height: 8px;
+}
+#es-allegra.es-allegra .es-symptoms__redness--right {
+  top: 33%;
+  left: 48%;
+  filter: blur(4px);
+  width: 12px;
+  height: 8px;
+}
+#es-allegra.es-allegra .es-symptoms__icon {
+  width: 90px;
+  margin-right: 10px;
+}
+#es-allegra.es-allegra .es-symptoms__textCtn {
+  max-width: 210px;
+  min-width: 210px;
+}
+#es-allegra.es-allegra .es-symptoms__listItem {
+  font-size: 16px;
+  font-family: "Nexa-Heavy";
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-symptoms__claims {
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-symptoms__claim {
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  font-family: "Nexa-Book";
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-symptoms__claim--yellow {
+  color: #f6cc30;
+  font-family: "Nexa-Heavy";
+}
+#es-allegra.es-allegra .es-doze {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-doze__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  text-align: center;
+}
+#es-allegra.es-allegra .es-doze__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-doze__single {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+#es-allegra.es-allegra .es-doze__icon {
+  width: 90px;
+  margin-bottom: 20px;
+}
+#es-allegra.es-allegra .es-doze__textCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 80%;
+  margin: 0 auto;
+}
+#es-allegra.es-allegra .es-doze__text {
+  font-size: 14px;
+  margin: 0 2px;
+  font-family: "Nexa-Book";
+  text-align: center;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-doze__text--yellow {
+  color: #f6cc30;
+  font-family: "Nexa-Heavy";
+}
+#es-allegra.es-allegra .es-doze__claim {
+  font-size: 14px;
+  font-family: "Nexa-Book";
+  text-align: center;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-season {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+  padding-bottom: 0;
+}
+#es-allegra.es-allegra .es-season__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-season__contentCtn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url(./img/łąka-mobile.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 20px;
+  min-height: 350px;
+  position: relative;
+}
+#es-allegra.es-allegra .es-season__pollen {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background-color: #c2be8a;
+  border-radius: 50%;
+  z-index: 10;
+  bottom: 20px;
+  opacity: 0;
+  filter: blur(1px);
+}
+#es-allegra.es-allegra .es-season__pollen--1 {
+  left: 80px;
+  animation: float-pollen-1 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--2 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--3 {
+  left: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--4 {
+  left: 0;
+  bottom: 50px;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--5 {
+  right: 0;
+  animation: float-pollen-5 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--6 {
+  left: 65px;
+  animation: float-pollen-1 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--7 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--8 {
+  left: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--9 {
+  left: 15px;
+  bottom: 50px;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--10 {
+  right: 20px;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--11 {
+  left: 80px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 205s;
+}
+#es-allegra.es-allegra .es-season__pollen--12 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-season__pollen--13 {
+  left: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 45s infinite;
+  animation-delay: 4s;
+}
+#es-allegra.es-allegra .es-season__pollen--14 {
+  left: 0;
+  bottom: 50px;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 10s;
+}
+#es-allegra.es-allegra .es-season__pollen--15 {
+  right: 0;
+  animation: float-pollen-5 45s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-season__pollen--16 {
+  left: 65px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 15s;
+}
+#es-allegra.es-allegra .es-season__pollen--17 {
+  left: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--18 {
+  left: 320px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--19 {
+  left: 15px;
+  bottom: 50px;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--20 {
+  right: 100px;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--21 {
+  right: 80px;
+  animation: float-pollen-1 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--22 {
+  right: 300px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--23 {
+  right: 450px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--24 {
+  right: 160px;
+  bottom: 50px;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--25 {
+  right: 0;
+  animation: float-pollen-5 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--26 {
+  right: 65px;
+  animation: float-pollen-1 25s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--27 {
+  right: 100px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--28 {
+  right: 120px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--29 {
+  right: 150px;
+  bottom: 50%;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--30 {
+  left: 120px;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-season__pollen--31 {
+  left: 80px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--32 {
+  left: 100px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-season__pollen--33 {
+  left: 150px;
+  bottom: 170px;
+  animation: float-pollen-3 45s infinite;
+  animation-delay: 4s;
+}
+#es-allegra.es-allegra .es-season__pollen--34 {
+  right:  150px;
+  bottom: 50%;
+  animation: float-pollen-4 20s infinite;
+  animation-delay: 10s;
+}
+#es-allegra.es-allegra .es-season__pollen--35 {
+  right: 50px;
+  animation: float-pollen-5 45s infinite;
+  animation-delay: 8s;
+}
+#es-allegra.es-allegra .es-season__pollen--36 {
+  left: 65px;
+  animation: float-pollen-1 25s infinite;
+  animation-delay: 15s;
+}
+#es-allegra.es-allegra .es-season__pollen--37 {
+  left: 100px;
+  bottom: 0;
+  animation: float-pollen-2 20s infinite;
+  animation-delay: 5s;
+}
+#es-allegra.es-allegra .es-season__pollen--38 {
+  left: 120px;
+  bottom: 170px;
+  animation: float-pollen-3 25s infinite;
+  animation-delay: 2s;
+}
+#es-allegra.es-allegra .es-season__pollen--39 {
+  left: 15px;
+  bottom: 50%;
+  animation: float-pollen-4 30s infinite;
+  animation-delay: 1s;
+}
+#es-allegra.es-allegra .es-season__pollen--40 {
+  right: 20px;
+  animation: float-pollen-5 35s infinite;
+}
+#es-allegra.es-allegra .es-season__contentText {
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  margin-top: 10px;
+  text-shadow: 4px 3px 8px rgb(31, 31, 32);
+  font-family: "Nexa-Black";
+  margin-bottom: 5px;
+  margin-top: 0;
+  padding: 0;
+}
+#es-allegra.es-allegra .es-season__iconsCtn {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #853a92;
+}
+#es-allegra.es-allegra .es-season__single {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px auto;
+}
+#es-allegra.es-allegra .es-season__iconCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-season__iconCtn--meadow {
+  margin-top: 40px;
+}
+#es-allegra.es-allegra .es-season__icon {
+  width: 90px;
+  margin-bottom: 20px;
+}
+#es-allegra.es-allegra .es-season__icon--meadow {
+  animation: es-pulse 2s infinite;
+}
+#es-allegra.es-allegra .es-season__iconText {
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-left: 20px;
+  min-width: 200px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-season__contentDesc {
+  font-size: 14px;
+  font-family: "Nexa-Book";
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-season sup {
+  font-size: 50%;
+}
+#es-allegra.es-allegra .es-calendar sup {
+  font-size: 50%;
+}
+#es-allegra.es-allegra .es-calendar {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0 0 0;
+}
+#es-allegra.es-allegra .es-calendar__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-calendar__subtitle {
+  font-family: "Nexa-Book";
+  font-size: 14px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-calendar__mainCtn {
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 10px;
+}
+#es-allegra.es-allegra .es-calendar__Ctn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-calendar__names {
+  max-width: 100px;
+  background-color: #e1c3f5;
+  margin-right: 20px;
+  margin-top: 15px;
+  box-shadow: 8px 9px 15px -1px rgb(33, 33, 34);
+  height: 100%;
+}
+#es-allegra.es-allegra .es-calendar__name {
+  color: #000;
+  font-size: 10px;
+  text-align: center;
+  font-family: "Nexa-Book";
+  padding: 0.2px;
+  line-height: 1.2;
+  margin: 10px 0;
+}
+#es-allegra.es-allegra .es-calendar__imgCtn {
+  height: 100%;
+  max-width: 180px;
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch;
+  white-space: nowrap;
+}
+#es-allegra.es-allegra .es-calendar__img {
+  height: 370px;
+  width: 600px;
+  display: inline-block;
+  max-width: none;
+}
+#es-allegra.es-allegra .es-calendar__legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  max-width: 600px;
+  margin: 20px auto;
+}
+#es-allegra.es-allegra .es-calendar__legendSingle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-calendar__legendText {
+  font-family: "Nexa-Book";
+  font-size: 14px;
+  color: #000;
+  margin: 0 10px;
+  min-width: 50px;
+  text-align: center;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-calendar__legendText--light {
+  padding: 5px;
+  background-color: #e1c3f5;
+  color: #000;
+}
+#es-allegra.es-allegra .es-calendar__legendText--dark {
+  padding: 5px;
+  background-color: #5d337a;
+  color: #fff;
+}
+#es-allegra.es-allegra .es-calendar__legendText--small {
+  margin-top: 20px;
+  font-size: 11px;
+  max-width: 300px;
+}
+#es-allegra.es-allegra .es-ingr {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+}
+#es-allegra.es-allegra .es-ingr__title {
+  text-transform: uppercase;
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  text-align: center;
+  margin: 20px 0;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-ingr__text {
+  font-family: "Nexa-Book";
+  font-size: 20px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-ingr__text--yellow {
+  color: #f6cc30;
+  font-family: "Nexa-Heavy";
+}
+#es-allegra.es-allegra .es-ingr__desc {
+  font-family: "Nexa-Book";
+  font-size: 18px;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-month {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+}
+#es-allegra.es-allegra .es-month__titleCtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+#es-allegra.es-allegra .es-month__title {
+  font-family: "Nexa-Heavy";
+  font-size: 20px;
+  margin: 16px 0;
+  line-height: 1;
+}
+#es-allegra.es-allegra .es-month__title--2 {
+  font-size: 40px;
+  margin: 0;
+  line-height: 0.5;
+}
+#es-allegra.es-allegra .es-month__titleImg {
+  max-width: 150px;
+}
+
+#es-allegra.es-allegra .es-month__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 140px;
+  min-height: 40px;
+  margin: 5px auto;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #9e4ea9;
+  background-color: #f6cc30;
+  line-height: 1;
+  padding: 5px;
+  box-shadow: 8px 8px 28px -10px rgb(17, 17, 17);
+  transition: 0.3s ease-in-out;
+  font-size: 20px;
+}
+#es-allegra.es-allegra .es-month__link:hover {
+  transition: 0.4s ease-in-out;
+  transform: scale(0.98);
+  box-shadow: inset -3px 0px 24px -12px rgb(17, 17, 17);
+}
+#es-allegra.es-allegra .es-month__img {
+  max-width: 70%;
+  margin: 0 auto;
+  display: block;
+}
+#es-allegra.es-allegra .es-month__titleImg {
+  max-width: 150px;
+}
+#es-allegra.es-allegra .es-footer {
+  margin: 10px;
+  background-color: #853a92;
+  padding: 20px 0;
+}
+#es-allegra.es-allegra .es-footer__claims {
+  margin-bottom: 20px;
+}
+#es-allegra.es-allegra .es-footer__claim {
+  font-size: 11px;
+  font-family: "Nexa-Book";
+  margin: 2px;
+  padding: 0;
+  line-height: 1.2;
+}
+#es-allegra.es-allegra .es-footer__numbers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#es-allegra.es-allegra .es-footer__number {
+  text-transform: uppercase;
+  font-size: 11px;
+  font-family: "Nexa-Book";
+  line-height: 1;
+}
+#es-allegra.es-allegra .es-footer__logo {
+  max-width: 100px;
+}
+#es-allegra.es-allegra .es-footer__warning {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Nexa-Book";
+  line-height: 1;
+  margin-top: 20px;
+}
+#es-allegra.es-allegra .es-video {
+  width: 100%;
+  background-color: #9e4ea9;
+  padding: 10px 0;
+}
+#es-allegra.es-allegra .es-video__iframe {
+  min-height: 220px;
+}
+
+@media (min-width: 700px) {
+  #es-allegra.es-allegra {
+    font-family: "Nexa-Black";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-kv {
+    padding: 20px 0;
+    min-height: 600px;
+  }
+  #es-allegra.es-allegra .es-kv--desktop {
+    background-image: url(./img/allegra-kv-bg-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #es-allegra.es-allegra .es-kv--mobile {
+    display: none;
+  }
+  #es-allegra.es-allegra .es-kv__title {
+    font-size: 45px;
+    margin-top: 120px;
+    margin-left: 20px;
+    line-height: 1;
+  }
+  #es-allegra.es-allegra .es-kv__subtitle {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin-top: -20px;
+    font-family: "Nexa-Heavy";
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-left: 20px;
+    margin-bottom: 60px;
+  }
+  #es-allegra.es-allegra .es-kv__content {
+    position: relative;
+    display: flex;
+    margin-left: 20px;
+  }
+  #es-allegra.es-allegra .es-kv__claim {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+  }
+  #es-allegra.es-allegra .es-kv__claim sup {
+    font-size: 8px;
+  }
+  #es-allegra.es-allegra .es-kv__packshot {
+    position: absolute;
+    max-width: 280px;
+    right: -15px;
+    bottom: -100px;
+  }
+  #es-allegra.es-allegra .es-mainCtn {
+    background-color: #9e4ea9;
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 30px 0;
+  }
+  #es-allegra.es-allegra .es-nav__link {
+    font-size: 12px;
+    min-width: 110px;
+    max-width: 110px;
+    min-height: 40px;
+  }
+  #es-allegra.es-allegra .es-about {
+    margin: 40px;
+  }
+  #es-allegra.es-allegra .es-about__title {
+    text-transform: uppercase;
+    font-family: "Nexa-Heavy";
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-about__titleImg {
+    max-width: 200px;
+  }
+  #es-allegra.es-allegra .es-about__iconsCtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  #es-allegra.es-allegra .es-about__icon {
+    margin: 0 auto;
+  }
+  #es-allegra.es-allegra .es-about__single {
+    max-width: 170px;
+    min-width: 170px;
+    min-height: 220px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #es-allegra.es-allegra .es-about__textCtn {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  #es-allegra.es-allegra .es-symptoms {
+    margin: 40px;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-symptoms__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-symptoms__textCtn {
+    min-width: 230px;
+    max-width: 230px;
+  }
+  #es-allegra.es-allegra .es-symptoms__listItem {
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-symptoms__claim {
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-doze {
+    margin: 40px;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-doze__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-doze__text {
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-doze__claim {
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-season {
+    margin: 40px;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-season__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-season__contentCtn {
+    background-image: url(./img/łąka-desktop.webp);
+  }
+  #es-allegra.es-allegra .es-season__contentText {
+    font-size: 25px;
+  }
+  #es-allegra.es-allegra .es-season__contentDesc {
+    font-size: 16px;
+  }
+  #es-allegra.es-allegra .es-season__iconsCtn {
+    justify-content: center;
+  }
+  #es-allegra.es-allegra .es-season__single {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #es-allegra.es-allegra .es-season__iconText {
+    text-align: center;
+    margin-left: 0;
+  }
+  #es-allegra.es-allegra .es-calendar {
+    margin: 40px;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-calendar__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-calendar__subtitle {
+    font-size: 20px;
+  }
+  #es-allegra.es-allegra .es-calendar__names {
+    max-width: 100px;
+    background-color: #e1c3f5;
+    margin-right: 0px;
+    margin-top: 0px;
+    box-shadow: none;
+  }
+  #es-allegra.es-allegra .es-calendar__imgCtn {
+    height: 100%;
+    max-width: 650px;
+    overflow-x: scroll;
+    white-space: nowrap;
+  }
+  #es-allegra.es-allegra .es-calendar__legendText--small {
+    margin-top: 0px;
+  }
+  #es-allegra.es-allegra .es-season__contentDesc {
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-ingr {
+    margin: 40px;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-ingr__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-ingr__subtitle {
+    font-size: 25px;
+  }
+  #es-allegra.es-allegra .es-month {
+    margin: 40px;
+  }
+  #es-allegra.es-allegra .es-month__title {
+    font-size: 40px;
+  }
+  #es-allegra.es-allegra .es-month__title--2 {
+    font-size: 62px;
+  }
+  #es-allegra.es-allegra .es-month__titleImg {
+    max-width: 200px;
+  }
+  #es-allegra.es-allegra .es-footer {
+    margin: 40px;
+    padding: 20px;
+  }
+  #es-allegra.es-allegra .es-footer__claim {
+    font-size: 11px;
+    font-family: "Nexa-Book";
+    margin: 2px;
+    padding: 0;
+  }
+  #es-allegra.es-allegra .es-footer__numbers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #es-allegra.es-allegra .es-footer__number {
+    text-transform: uppercase;
+    font-size: 11px;
+  }
+  #es-allegra.es-allegra .es-footer__logo {
+    max-width: 100px;
+  }
+  #es-allegra.es-allegra .es-footer__warning {
+    text-align: center;
+    font-size: 18px;
+  }
+  #es-allegra.es-allegra .es-video__iframe {
+    min-height: 260px;
+    padding: 10px 0;
+  }
+}
+@media (min-width: 900px) {
+  #es-allegra.es-allegra {
+    font-family: "Nexa-Black";
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.2;
+    color: #fff;
+    background-color: #853a92;
+  }
+  #es-allegra.es-allegra .es-kv {
+    padding: 20px 0;
+    min-height: 500px;
+  }
+  #es-allegra.es-allegra .es-kv--desktop {
+    background-image: url(./img/allegra-kv-bg-desktop.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  #es-allegra.es-allegra .es-kv--mobile {
+    display: none;
+  }
+  #es-allegra.es-allegra .es-kv__title {
+    font-size: 42px;
+    margin-top: 110px;
+    margin-left: 40px;
+    line-height: 1;
+  }
+  #es-allegra.es-allegra .es-kv__subtitle {
+    font-size: 15px;
+    padding: 5px 10px;
+    margin-top: -10px;
+    font-family: "Nexa-Heavy";
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    margin-left: 40px;
+  }
+  #es-allegra.es-allegra .es-kv__content {
+    position: relative;
+    display: flex;
+    margin-left: 40px;
+    margin-top: -40px;
+  }
+  #es-allegra.es-allegra .es-kv__claim {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+  }
+  #es-allegra.es-allegra .es-kv__claim sup {
+    font-size: 8px;
+  }
+  #es-allegra.es-allegra .es-kv__packshot {
+    position: absolute;
+    max-width: 320px;
+    right: -15px;
+    bottom: 20px;
+  }
+  #es-allegra.es-allegra .es-mainCtn {
+    background-color: #9e4ea9;
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    margin-top: -50px;
+    padding: 30px 0;
+  }
+  #es-allegra.es-allegra .es-nav__link {
+    font-size: 12px;
+    min-width: 110px;
+    max-width: 110px;
+    min-height: 40px;
+  }
+#es-allegra.es-allegra .es-symptoms__textCtn {
+  max-width: 170px;
+  min-width: 170px;
+}
+#es-allegra.es-allegra .es-symptoms__icon {
+  width: 80px;
+  margin-right: 5px;
+}
+#es-allegra.es-allegra .es-symptoms__listItem {
+  font-size: 12px;
+}
+#es-allegra.es-allegra .es-doze__text {
+  font-size: 16px;
+  margin: 0 2px;
+  font-family: "Nexa-Book";
+  text-align: center;
+}
+#es-allegra.es-allegra .es-month {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #es-allegra.es-allegra .es-month__title {
+    text-align: center;
+  }
+  #es-allegra.es-allegra .es-month__titleImg {
+    max-width: 200px;
+  }
+  #es-allegra.es-allegra .es-month__img {
+    max-width: 280px;
+  }
+#es-allegra.es-allegra .es-footer__warning {
+  text-align: center;
+  font-size: 14px;
+  font-family: "Nexa-Book";
+}
+#es-allegra.es-allegra .es-video__iframe {
+    min-height: 370px;
+  }
+}
+
+@media (max-width: 450px) {
+  #es-allegra.es-allegra .es-kv__subtitle {
+    width: 80%;
+  }
+  #es-allegra.es-allegra .es-kv__claims {
+    margin-bottom: 90px;
+  }
+  #es-allegra.es-allegra .es-kv__packshot {
+    max-width: 180px;
+    bottom: 105px;
+    right: -10px;
+  }
+  #es-allegra.es-allegra .es-mainCtn {
+    margin-top: -90px;
+  }
+  #es-allegra.es-allegra .es-nav__link {
+    max-width: 80px;
+    min-width: 80px;
+    font-size: 9px;
+  }
+}
+@media (max-width: 359px) {
+  #es-allegra.es-allegra .es-kv__packshot {
+    max-width: 180px;
+    bottom: 105px;
+    right: -10px;
+  }
+  #es-allegra.es-allegra .es-kv__claims {
+    margin-bottom: 90px;
+  }
+  #es-allegra.es-allegra .es-mainCtn {
+    margin-top: -90px;
+  }
+  #es-allegra.es-allegra .es-nav__link {
+    max-width: 80px;
+    min-width: 80px;
+    font-size: 9px;
+  }
+}
+@media (max-width: 320px) {
+  #es-allegra.es-allegra .es-kv__packshot {
+    max-width: 180px;
+    bottom: 105px;
+    right: -10px;
+  }
+  #es-allegra.es-allegra .es-kv__claims {
+    margin-bottom: 90px;
+  }
+  #es-allegra.es-allegra .es-mainCtn {
+    margin-top: -90px;
+  }
+  #es-allegra.es-allegra .es-nav__link {
+    max-width: 80px;
+    min-width: 80px;
+    font-size: 9px;
+  }
+}/*# sourceMappingURL=style.css.map */
+    </style>
+</head>
+<body>
+    <div id="es-allegra" class="es-allegra">
+        <div class="es-kv es-kv--mobile">
+            <div class="es-kv__pollen es-kv__pollen--5"></div>
+            <div class="es-kv__pollen es-kv__pollen--1"></div>
+            <div class="es-kv__pollen es-kv__pollen--2"></div>
+            <div class="es-kv__pollen es-kv__pollen--3"></div>
+            <div class="es-kv__pollen es-kv__pollen--4"></div>
+            <div class="es-kv__pollen es-kv__pollen--6"></div>
+            <div class="es-kv__pollen es-kv__pollen--7"></div>
+            <div class="es-kv__pollen es-kv__pollen--8"></div>
+            <div class="es-kv__pollen es-kv__pollen--9"></div>
+            <div class="es-kv__pollen es-kv__pollen--10"></div>
+            <div class="es-kv__titleCtn">
+              <p class="es-kv__title">WYPRZEDZAM <br> SILNE OBJAWY <br> ALERGII</p>
+              <p class="es-kv__subtitle">
+                  BIORĘ PRZED NASILENIEM PYLENIA<sup>1</sup>
+              </p>
+          </div>
+            <div class="es-kv__content">
+                <div class="es-kv__claims">
+                    <p class="es-kv__claim">Bez czekania<sup>2</sup></p>
+                    <p class="es-kv__claim">Bez przerwy<sup>2</sup></p>
+                    <p class="es-kv__claim">Bez zaburzeń koncentracji<sup>4</sup></p>
+                </div>
+                <img src="./img/allegra-10-tabletek.webp" alt="Na zdjęciu jest kobieta, która ma alergię na pyłki. Lek Allegra leczy objawy alergii. Bierz już 2 tygodnie przed nasileniem pylenia. Wyprzedź alergię. Sprawdź jak leczyć w apteka Melissa" class="es-kv__packshot">
+            </div>
+        </div>
+
+        <div class="es-kv es-kv--desktop">
+            <div class="es-kv__pollen es-kv__pollen--5"></div>
+            <div class="es-kv__pollen es-kv__pollen--1"></div>
+            <div class="es-kv__pollen es-kv__pollen--2"></div>
+            <div class="es-kv__pollen es-kv__pollen--3"></div>
+            <div class="es-kv__pollen es-kv__pollen--4"></div>
+            <div class="es-kv__pollen es-kv__pollen--6"></div>
+            <div class="es-kv__pollen es-kv__pollen--7"></div>
+            <div class="es-kv__pollen es-kv__pollen--8"></div>
+            <div class="es-kv__pollen es-kv__pollen--9"></div>
+            <div class="es-kv__pollen es-kv__pollen--10"></div>
+            <div class="es-kv__pollen es-kv__pollen--11"></div>
+            <div class="es-kv__pollen es-kv__pollen--12"></div>
+            <div class="es-kv__pollen es-kv__pollen--13"></div>
+            <div class="es-kv__pollen es-kv__pollen--14"></div>
+            <div class="es-kv__pollen es-kv__pollen--16"></div>
+            <div class="es-kv__pollen es-kv__pollen--17"></div>
+            <div class="es-kv__pollen es-kv__pollen--18"></div>
+            <div class="es-kv__pollen es-kv__pollen--19"></div>
+            <div class="es-kv__pollen es-kv__pollen--20"></div>
+            <div class="es-kv__pollen es-kv__pollen--25"></div>
+            <div class="es-kv__pollen es-kv__pollen--21"></div>
+            <div class="es-kv__pollen es-kv__pollen--22"></div>
+            <div class="es-kv__pollen es-kv__pollen--23"></div>
+            <div class="es-kv__pollen es-kv__pollen--24"></div>
+            <div class="es-kv__pollen es-kv__pollen--26"></div>
+            <div class="es-kv__pollen es-kv__pollen--27"></div>
+            <div class="es-kv__pollen es-kv__pollen--28"></div>
+            <div class="es-kv__pollen es-kv__pollen--29"></div>
+            <div class="es-kv__pollen es-kv__pollen--30"></div>
+            <div class="es-kv__pollen es-kv__pollen--31"></div>
+            <div class="es-kv__pollen es-kv__pollen--32"></div>
+            <div class="es-kv__pollen es-kv__pollen--33"></div>
+            <div class="es-kv__pollen es-kv__pollen--34"></div>
+            <div class="es-kv__pollen es-kv__pollen--36"></div>
+            <div class="es-kv__pollen es-kv__pollen--37"></div>
+            <div class="es-kv__pollen es-kv__pollen--38"></div>
+            <div class="es-kv__pollen es-kv__pollen--39"></div>
+            <div class="es-kv__pollen es-kv__pollen--40"></div>
+            <div class="es-kv__titleCtn">
+              <p class="es-kv__title">WYPRZEDZAM <br> SILNE OBJAWY <br> ALERGII</p>
+              <p class="es-kv__subtitle">
+                  BIORĘ PRZED NASILENIEM PYLENIA<sup>1</sup>
+              </p>
+            </div>
+            <div class="es-kv__content">
+                <div class="es-kv__claims">
+                    <p class="es-kv__claim">Bez czekania<sup>2</sup></p>
+                    <p class="es-kv__claim">Bez przerwy<sup>2</sup></p>
+                    <p class="es-kv__claim">Bez zaburzeń koncentracji<sup>4</sup></p>
+                </div>
+                <img src="./img/allegra-10-tabletek.webp" alt="Na zdjęciu jest kobieta, która ma alergię na pyłki. Lek Allegra leczy objawy alergii. Bierz już 2 tygodnie przed nasileniem pylenia. Wyprzedź alergię. Sprawdź jak leczyć w apteka Melissa" class="es-kv__packshot">
+            </div>
+        </div>
+        <!-- change nav section for Olmed and Apteka Zawiszy -->
+        <div class="es-mainCtn">
+            <div class="es-nav">
+                    <a data-href="#allegra-lek-na-alergie" class="es-nav__link">informacje <br> o leku</a>
+                    <a data-href="#allegra-dawkowanie" class="es-nav__link">dawkowanie</a>
+                    <a data-href="#sezon-alergiczny" class="es-nav__link">co zrobić, <br> gdy zbliża się <br> sezon?</a>
+                    <a data-href="#alergia-kalendarz" class="es-nav__link">kalendarz <br> alergiczny</a>
+                    <a data-href="#allegra-sklad" class="es-nav__link">skład</a>
+            </div>
+
+            <div class="es-about" id="allegra-lek-na-alergie">
+                <div class="es-about__titleCtn">
+                    <p class="es-about__title">Jak działa</p>
+                    <img src="./img/Allegra-logo.webp" alt="Allegra" class="es-about__titleImg">
+                    <p class="es-about__title">?</p>
+                </div>
+                <div class="es-about__iconsCtn">
+                    <div class="es-about__single">
+                        <div class="es-about__iconCtn">
+                            <img src="./img/bez-czekania-icon.webp" alt="Dowiedz się jak szybko działa lek bez recepty Allegra. Bez objawów alergii już po godzinie, bez czekania. Dostępny w aptece Melissa" class="es-about__icon es-about__icon--1">
+                        </div>
+                        <div class="es-about__textCtn">
+                            <p class="es-about__subtitle">bez czekania</p>
+                            <p class="es-about__desc">
+                                Allegra działa szybko – <br> już po 1 godzinie<sup>2</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                      <div class="es-about__single">
+                        <div class="es-about__iconCtn">
+                            <img src="./img/bez-przerwy-icon.webp" alt="Dawkowanie tabletek na alergię Allegra. Wystarczy 1 tabletka na cały dzień i noc. Bez przerwy w ciągu doby 24h. Ulotka zawiera szczegóły" class="es-about__icon es-about__icon--2">
+                        </div>
+                        <div class="es-about__textCtn">
+                            <p class="es-about__subtitle">bez przerwy 24h</p>
+                            <p class="es-about__desc">
+                                Wystarczy 1 tabletka <br> na cały dzień i noc<sup>3</sup>
+                            </p>
+                        </div>
+                    </div>
+
+                      <div class="es-about__single">
+                        <div class="es-about__iconCtn">
+                            <img src="./img/bez-zaburzen-icon.webp" alt="Leczenie objawów alergii u osoby uczulonej bez zaburzeń koncentracji." class="es-about__icon es-about__icon--3">
+                        </div>
+                        <div class="es-about__textCtn">
+                            <p class="es-about__subtitle">bez zaburzeń <br> koncentracji</p>
+                            <p class="es-about__desc">
+                                – aby wrócić do swoich <br> zadań codziennych<sup>5</sup>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-symptoms" id="es-symptoms">
+                <p class="es-symptoms__title">
+                    na jakie objawy <br> działa allegra?
+                </p>
+                <div class="es-symptoms__iconsCtn">
+                    <div class="es-symptoms__single">
+                        <div class="es-symptoms__iconCtn">
+                            <div class="es-symptoms__redness"></div>
+                            <img src="./img/nos-icon.webp" alt="Dowiedz się jak sprawdzić czy to alergia i jak leczyć alergię. Poznaj główne objawy alergii." class="es-symptoms__icon">
+                        </div>
+
+                        <div class="es-symptoms__textCtn">
+                            <ul class="es-symptoms__list">
+                                <li class="es-symptoms__listItem">Kichanie</li>
+                                <li class="es-symptoms__listItem">Katar/zatkany nos</li>
+                                <li class="es-symptoms__listItem">Swędzenie nosa</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="es-symptoms__single">
+                        <div class="es-symptoms__iconCtn">
+                            <div class="es-symptoms__redness es-symptoms__redness--left"></div>
+                            <div class="es-symptoms__redness es-symptoms__redness--right"></div>
+                            <img src="./img/oczy-icon.webp" alt="Ikona wskazuje zastosowanie Allegry jako leku przeciwalergicznego w przypadku zaczerwienienia, łzawienia i swędzenia oczu." class="es-symptoms__icon">
+                        </div>
+
+                        <div class="es-symptoms__textCtn">
+                            <ul class="es-symptoms__list">
+                                <li class="es-symptoms__listItem">Zaczerwienienie oczu</li>
+                                <li class="es-symptoms__listItem">Łzawienie oczu</li>
+                                <li class="es-symptoms__listItem">Swędzenie oczu</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="es-symptoms__claims">
+                    <p class="es-symptoms__claim">
+                        Allegra to nowoczesny lek przeciwhistaminowy, który leczy 
+                    </p>
+                    <p class="es-symptoms__claim es-symptoms__claim--yellow">
+                        objawy sezonowego alergicznego zapalenia błony śluzowej nosa.
+                    </p>
+                </div>
+            </div>
+
+            <div class="es-doze" id="allegra-dawkowanie">
+                <p class="es-doze__title">
+                    dawkowanie
+                </p>
+                <div class="es-doze__iconsCtn">
+                    <div class="es-doze__single">
+                        <div class="es-doze__iconCtn">
+                            <img src="./img/dawkowanie-icon.webp" alt="Allegra to lek przeciwhistaminowy w formie tabletek do kupienia online w aptece internetowej Melissa. Stosować zgodnie z zalecaną dawką." class="es-doze__icon">
+                        </div>
+                        <div class="es-doze__textCtn">
+                            <p class="es-doze__text">
+                                Zalecana dawka dla osób dorosłych oraz dzieci w wieku 12 lat
+                            </p>
+                            <p class="es-doze__text">
+                                i starszych to
+                            </p>
+                            <p class="es-doze__text es-doze__text--yellow">
+                                1 tabletka
+                            </p>
+                            <p class="es-doze__text">
+                                (120 mg)
+                            </p>
+                            <p class="es-doze__text es-doze__text--yellow">
+                                raz na dobę.
+                            </p>
+                        </div>
+                    </div>
+
+                    <p class="es-doze__claim">
+                        Tabletki należy przyjmować doustnie, przed posiłkiem, popijając wodą.<sup>3</sup>
+                    </p>
+                </div>
+            </div>
+
+            <div class="es-season" id="sezon-alergiczny">
+                <div class="es-season__title">
+                    Co robić, kiedy zbliża się <br> sezon alergiczny?
+                </div>
+                <div class="es-season__contentCtn">
+                    <div class="es-season__pollen es-season__pollen--5"></div>
+                    <div class="es-season__pollen es-season__pollen--1"></div>
+                    <div class="es-season__pollen es-season__pollen--2"></div>
+                    <div class="es-season__pollen es-season__pollen--3"></div>
+                    <div class="es-season__pollen es-season__pollen--4"></div>
+                    <div class="es-season__pollen es-season__pollen--6"></div>
+                    <div class="es-season__pollen es-season__pollen--7"></div>
+                    <div class="es-season__pollen es-season__pollen--8"></div>
+                    <div class="es-season__pollen es-season__pollen--9"></div>
+                    <div class="es-season__pollen es-season__pollen--10"></div>
+
+                    <div class="es-season__pollen es-season__pollen--11"></div>
+                    <div class="es-season__pollen es-season__pollen--12"></div>
+                    <div class="es-season__pollen es-season__pollen--13"></div>
+                    <div class="es-season__pollen es-season__pollen--14"></div>
+                    <div class="es-season__pollen es-season__pollen--15"></div>
+                    <div class="es-season__pollen es-season__pollen--16"></div>
+                    <div class="es-season__pollen es-season__pollen--17"></div>
+                    <div class="es-season__pollen es-season__pollen--18"></div>
+                    <div class="es-season__pollen es-season__pollen--19"></div>
+                    <div class="es-season__pollen es-season__pollen--20"></div>
+
+                    <div class="es-season__pollen es-season__pollen--25"></div>
+                    <div class="es-season__pollen es-season__pollen--21"></div>
+                    <div class="es-season__pollen es-season__pollen--22"></div>
+                    <div class="es-season__pollen es-season__pollen--23"></div>
+                    <div class="es-season__pollen es-season__pollen--24"></div>
+                    <div class="es-season__pollen es-season__pollen--26"></div>
+                    <div class="es-season__pollen es-season__pollen--27"></div>
+                    <div class="es-season__pollen es-season__pollen--28"></div>
+                    <div class="es-season__pollen es-season__pollen--29"></div>
+                    <div class="es-season__pollen es-season__pollen--30"></div>
+
+                    <div class="es-season__pollen es-season__pollen--31"></div>
+                    <div class="es-season__pollen es-season__pollen--32"></div>
+                    <div class="es-season__pollen es-season__pollen--33"></div>
+                    <div class="es-season__pollen es-season__pollen--34"></div>
+                    <div class="es-season__pollen es-season__pollen--35"></div>
+                    <div class="es-season__pollen es-season__pollen--36"></div>
+                    <div class="es-season__pollen es-season__pollen--37"></div>
+                    <div class="es-season__pollen es-season__pollen--38"></div>
+                    <div class="es-season__pollen es-season__pollen--39"></div>
+                    <div class="es-season__pollen es-season__pollen--40"></div>
+
+                    
+                    <p class="es-season__contentText">
+                      WYPRZEDZAM SILNE <br> OBJAWY ALERGII I BIORĘ <br> PRZED NASILENIEM PYLENIA<sup>1</sup>
+                    </p>
+                    <p class="es-season__contentDesc">
+                        O wiele łatwiej jest zapobiec reakcji alergicznej <br> na wczesnym etapie,
+                        niż zatrzymać ją w trakcie nasilenia pylenia.
+                    </p>
+                </div>
+
+                <div class="es-video">
+                  <video class="es-video__iframe" width="100%" height="auto" poster="images/poster.webp" controls>
+                    <source src="./img/allegra.mp4" type="video/mp4">
+                  </video>
+                </div>    
+
+                <div class="es-season__iconsCtn">
+                    <div class="es-season__single">
+                        <div class="es-season__iconCtn">
+                            <img src="./img/alergeny-icon.webp" alt="Przy alergii wziewnej unikaj alergenów i ogranicz przebywanie na świeżym powietrzu, w którym mogą znajdować się pyłki traw, kwiatowe i drzew." class="es-season__icon">
+                        </div>
+                        <p class="es-season__iconText">
+                            Unikaj ekspozycji <br> na alergeny
+                        </p>
+                    </div>
+
+                    <div class="es-season__single">
+                        <div class="es-season__iconCtn">
+                            <img src="./img/kalendarz-icon.webp" alt="Jak sprawdzić na co pojawia się reakcja alergiczna? Sprawdź co teraz pyli i połącz ze stosowaniem tabletek przeciw alergii Allegra." class="es-season__icon">
+                        </div>
+                        <p class="es-season__iconText">
+                            Śledź <br> Kalendarz <br> pyleń
+                        </p>
+                    </div>
+
+                    <div class="es-season__single">
+                        <div class="es-season__iconCtn">
+                            <img src="./img/czynniki-drazniace-icon.webp" alt="Jeśli jesteś alergikiem unikaj czynników wywołujących uczulenie.Poznaj pozostałe sposoby na alergię." class="es-season__icon">
+                        </div>
+                        <p class="es-season__iconText">
+                            Eliminuj <br> czynniki <br> drażniące
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-calendar" id="alergia-kalendarz">
+                <p class="es-calendar__title">
+                    kalendarz pylenia <br> roślin w Polsce<sup>6</sup>
+                </p>
+                <!-- <p class="es-calendar__subtitle">
+                    Zapoznaj się z poniższym kalendarzem i śledź okresy 
+                    pylenia roślin, na które jesteś uczulony.
+                </p> -->
+                <div class="es-calendar__mainCtn">
+                    <div class="es-calendar__Ctn">
+                        <div class="es-calendar__names">
+                            <p class="es-calendar__name">Trawy</p>
+                            <p class="es-calendar__name">Brzoza</p>
+                            <p class="es-calendar__name">Bylica</p>
+                            <p class="es-calendar__name">Leszyna</p>
+                            <p class="es-calendar__name">Olsza</p>
+                            <p class="es-calendar__name">Topola</p>
+                            <p class="es-calendar__name">Jesion</p>
+                            <p class="es-calendar__name">Dąb</p>
+                            <p class="es-calendar__name">Szczaw</p>
+                            <p class="es-calendar__name">Babka</p>
+                            <p class="es-calendar__name">Pokrzywa</p>
+                            <p class="es-calendar__name">Komosa</p>
+                            <p class="es-calendar__name">Ambrozja</p>
+                            <p class="es-calendar__name">Cladosporium</p>
+                            <p class="es-calendar__name">Altemaria</p>
+                        </div>
+                        <div class="es-calendar__imgCtn">
+                            <img src="./img/kalendarz-pyleń.webp" alt="Dowiedz się więcej o głównych alergenach powodujących uczulenie. Zapoznaj się z kalendarzem stężeń pylenia roślin i drzew w Polsce." class="es-calendar__img">
+                        </div>
+                    </div>
+                    <div class="es-calendar__legend">
+                        <div class="es-calendar__legendSingle">
+                            <p class="es-calendar__legendText">Legenda</p>
+                            <p class="es-calendar__legendText es-calendar__legendText--light">niskie</p>
+                            <p class="es-calendar__legendText es-calendar__legendText--dark">wysokie</p>
+                        </div>
+                        <div class="es-calendar__legendSingle">
+                            <p class="es-calendar__legendText es-calendar__legendText--small">
+                                Kalendarz pylenia roślin w Polsce dla Regionu I - 
+                                patrz mapa i Pozostałe regiony www.alergen.info.pl
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="es-ingr" id="allegra-sklad">
+                <p class="es-ingr__title">skład</p>
+                <p class="es-ingr__text">Każda tabletka zawiera</p>
+                <p class="es-ingr__text es-ingr__text--yellow">
+                    120 mg chlorowodorku feksofenadyny.
+                </p>
+
+                <p class="es-ingr__desc">
+                    Pozostałe składniki: kroskarmeloza sodowa, skrobia kukurydziana żelowana, celuloza mikrokrystaliczna, magnezu stearynian.<sup>3</sup>
+                </p>
+            </div>
+            
+            <div class="es-month">
+              <div class="es-month__wrapper">
+                  <div class="es-month__titleCtn">
+                      <p class="es-month__title">3x</p>
+                      <img src="./img/logo2.webp" loading="lazy" alt="Allegra" class="es-month__titleImg">
+                  </div>
+                  <div class="es-month__titleCtn">
+                      <p class=" es-month__title es-month__title--2"> = </p>
+                  </div>
+                  <div class="es-month__titleCtn">
+                      <p class="es-month__title">MIESIĄC BEZ&nbsp;ALERGII</p>
+                  </div>
+              </div>
+              <div class="es-month__wrapper">
+                  <img src="./img/month-pack.webp" loading="lazy" alt="Wielopak Allegra" class="es-month__img">
+                  <a data-href="https://www.apteka-melissa.pl/produkt/allegra-120-mg-3-x-10-tabletek-lek-na-alergie-i-katar-sienny-cena-opinie-dawkowanie,61946.html" target="_blank" class="es-month__link">SPRAWDŹ ></a>
+              </div>
+          </div>
+        </div>
+        <div class="es-footer">
+            <div class="es-footer__claims">
+                <p class="es-footer__claim">
+                    Dostępne na rynku nowoczesne preparaty przeciwalergiczne II generacji pozwalają na życie z alergią. Zmniejszają objawy kataru siennego takie jak kichanie, swędzenie, uczucie zatkanego nosa, zaczerwienienie czy łzawienie oczu, bez obniżenia koncentracji. Co ważne, leki te dostępne są bez recepty, dzięki temu znając swoje objawy i wiedząc co nam pomaga, 
+                    nie ma konieczności częstej kontroli u specjalisty.
+                </p> <br>
+                <p class="es-footer__claim">
+                    Allegra, tabletki powlekane 120 mg. chlorowodorku feksofenadyny, co odpowiada 112 mg feksofenadyny. Wskazania: Leczenie objawowe sezonowego alergicznego zapalenia błony śluzowej nosa. 
+                    Podmiot odpowiedzialny: Opella Healthcare Poland Sp. z o.o. grupa Sanofi {ChPL 04/2022}
+                </p>
+                <br>
+                <p class="es-footer__claim">
+                  <sup>1.</sup> Wraz z pierwszymi objawami. Czas leczenia powinien być ograniczony do okresu ekspozycji na alergeny. Pawliczak R. Skuteczne leczenie alergicznego nieżytu nosa w szczycie sezonu pylenia - zadanie trudne? Wykonalne? Terapia 2020; 6:6-12.
+                </p>
+                <p class="es-footer__claim">
+                    <sup>2.</sup> ChPL Allegra 04/2022. Działanie przeciwhistaminowe leku rozpoczyna się w ciągu godziny. 
+                </p>
+                <p class="es-footer__claim">
+                    <sup>3.</sup> Badania kliniczne przeprowadzone u pacjentów z sezonowym alergicznym zapaleniem błony śluzowej nosa wykazały, że dawka 120mg jest wystarczająca do zapewnienia skutecznego działania przez 24 godziny. ChPL Allegra 04/2022 
+                </p>
+                <p class="es-footer__claim">
+                    <sup>4.</sup> ChPL Allegra 04/2022: W obiektywnych testach wykazano, że Allegra nie wywiera znaczącego wpływu na czynność ośrodkowego układu nerwowego. W celu identyfikacji wrażliwych osób, u których występuje nietypowa reakcja na leki, zaleca się sprawdzenie indywidualnej reakcji na produkt, zanim pacjent będzie prowadził pojazd lub wykonywał skomplikowane zadania.
+                </p>
+                <p class="es-footer__claim">
+                    <sup>5.</sup> Na podstawie ChPL Allegra 04/2022. Biorąc pod uwagę profil farmakologiczny i zgłaszane działania niepożądane jest mało prawdopodobne, aby feksofendyny chlorowodorek wpływa na zdolność prowadzenia pojazdów i obsługiwania maszyn. W obiektywnych testach wykazano, że Allegra nie wywiera znaczącego wpływu na czynność ośrodkowego układu nerwowego. Oznacza to że pacjenci mogę prowadzić pojazdy mechaniczne i wykonywać zadania wymagające koncentracji. Jednakże w celu identyfikacji wrażliwych osób, u których występuje nietypowa reakcja na leki, zaleca się sprawdzenie indywidualnych reakcji na produkt, zanim pacjent będzie prowadził pojazd lub wykonywał skomplikowane zdanie.
+                </p>
+                <p class="es-footer__claim">
+                    <sup>6.</sup> Kalendarz pylenia roślin w Polsce - REGION I . Patrz mapa www.alergen.info.pl Dla pozostałych regionów - patrz www.alergen.info.pl
+                </p>
+            </div>
+
+            <div class="es-footer__numbers">
+                <p class="es-footer__number">
+                  MAT-PL-2300120-2.0-06.2023
+                </p>
+                <img src="./img/sanofi-logo.webp" alt="Sanofi" class="es-footer__logo">
+            </div>
+
+            <p class="es-footer__warning">
+                To jest lek. Dla bezpieczeństwa stosuj go zgodnie z ulotką dołączoną do opakowania. <br>
+                Nie przekraczaj maksymalnej dawki leku. <br>
+                W przypadku wątpliwości skonsultuj się z lekarzem lub farmaceutą.
+            </p>
+        </div>
+    </div>
+    <script
+    defer> $(".es-nav__link").click(function () { var idik = $(this).attr('data-href'); $('html, body').animate({ scrollTop: $(idik).offset().top - 110 + 'px' }); });</script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"> </script>
+</body>
+</html>
